@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Image Cropping</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="text-muted">Process your image</h3>
+        </div>
+		
+		<h6>
+		Maximum width of image must be below 860 pixels
+		</h6>
+		
+        <div class="cropper">
+		 <div id="image">
+            <img src=" {{url_for('uploaded_file', filename=filename)}} " style="max-width: 860px;">
+         </div>
+			
+		<div class="cropping">
+			<div class="col-lg-6">
+				<h4>Crop</h4>
+				<form id="form-crop"" action="{{ url_for('crop') }}" method="POST" enctype="multipart/form-data">
+				<input type="number" placeholder="x1" min="0" name="x1" required>  
+				<input type="number" placeholder="y1" min="0" name="y1" required>
+				<p>
+					<input type="number" placeholder="x2" min="0" name="x2" required>                 
+					<input type="number" placeholder="y2" min="0" name="y2" required>   
+				</p>
+				<input type="text" placeholder="name of file" class="hidden" name="image" value="{{ image_name }}">
+				<p>
+					<button id="btnCrop" class="btn btn-lg btn-success" type="submit">Go</button>
+				</p>
+				</form>                
+			</div>
+		</div>
+	</div>
+</body>
