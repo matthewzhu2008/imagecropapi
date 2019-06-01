@@ -15,8 +15,13 @@ A static and template folder need to be created in the same folder as api.py and
 My directory looks like the following:
 
 --| api.py
+
 --| static
+
 ----| images
+
 ------| imagetobecropped.png
+
 --| templates
+
 ----| cropping.html
