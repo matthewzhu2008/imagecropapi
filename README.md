@@ -27,3 +27,10 @@ My directory looks like the following:
 --| templates
 
 ----| cropping.html
+
+
+Once the necessary installations and folder creations are done, navigate to the folder (in my case, the 'project' folder) that contains the aforementioned files/folders and run with the command
+
+`python api.py`
+
+This will host on your local server which should be listed in cmd prompt behind "Running on " and use a web browser to access it and proceed with uploading the image and choosing coordinates to crop it with. In addition, the name of the file (for example, "imagetobecropped.png") must be placed in the box above "Go" with the placeholder "name of file".
